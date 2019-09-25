@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import axios from "axios"
 import FollowerCards from "./FollowerCards"
+import Header from "./Header"
+import Footer from "./Footer"
 
 class App extends React.Component {
   constructor() {
@@ -76,7 +78,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <Header />
         <FollowerCards followersList={this.state.followersList}/>
+        <Footer />
       </div>
     );
   }

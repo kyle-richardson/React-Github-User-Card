@@ -4,6 +4,11 @@ html {
 
 body {
   font-size: 1.4rem;
+  background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+h1 {
+  font-size: 3.7rem;
 }
 h2 {
   font-size: 2.4rem;
@@ -20,10 +25,24 @@ h1, h2, h3, h4 {
   margin: 5px 0;
 }
 
+.header {
+  margin: 30px auto;
+  text-align: center;
+}
+
+
 .thumbnail {
   max-width: 150px;
   height: auto;
-  margin: 10px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.footer {
+  font-size: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 .show {

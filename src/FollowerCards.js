@@ -9,28 +9,30 @@ const FollowerCards = (props) => {
         border: 2px solid black;
         display: flex;
         flex-direction: row;
-        margin: 20px auto;
-        padding: 15px 0;
         width: 60%;
+        padding: 20px;
+        display: flex;
+        border-radius: 5px;
+        box-shadow: 0 1px 6px -2px #000;
+        background-color: #FFF;
+        margin: 0 auto;
+        margin-bottom: 30px;
     `
     return (
         <div>
-            {/* {console.log(props.followersList)} */}
             {props.followersList.map(follower =>{
                 return (
                     <Card>
                         <img className="thumbnail" src={follower.avatarUrl} alt='thumbnail'/>
                         <div>
                             <h2>{follower.name}</h2>
-                            <p>{follower.login}</p>
-                            <a href={follower.htmlUrl}>{follower.htmlUrl}</a>
+                            <a href={follower.htmlUrl}>Github page</a>
+                            <p>Username: {follower.login}</p>
                             <p>Followers: {follower.followers}</p>
                             <p>Following: {follower.following}</p>
-                            <p>Location: {follower.location}</p>
+                            <p className={follower.location?'show':'hide'}>Location: {follower.location}</p>
                             <p className={follower.bio?'show':'hide'}>Bio: {follower.bio}</p>
                         </div>
-                        
-                        
                     </Card>
                 )
             })}
