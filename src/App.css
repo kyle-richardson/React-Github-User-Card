@@ -24,12 +24,33 @@ p {
 h1, h2, h3, h4 {
   margin: 5px 0;
 }
-
+a {
+  text-decoration: none;
+}
 .header {
   margin: 30px auto;
   text-align: center;
 }
+.header a {
+  color: black;
+}
+.header a:visited {
+  color: black;
+}
 
+.icon {
+  margin: 5px 10px;
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 6px;
+  font-size: 2rem;
+}
+
+.icon:hover {
+  border-color: white;
+  color: white;
+  cursor: pointer;
+}
 
 .thumbnail {
   max-width: 150px;
@@ -44,6 +65,7 @@ h1, h2, h3, h4 {
   text-align: center;
   padding-bottom: 10px;
 }
+
 
 .show {
   display: block;

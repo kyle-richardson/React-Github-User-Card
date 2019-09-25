@@ -28,7 +28,6 @@ class App extends React.Component {
 
   componentDidMount = () => {
     const responseSet = (data) => {
-      // console.log(data)
       this.setState({
         user: {
           bio:data.bio,
