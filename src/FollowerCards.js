@@ -8,11 +8,8 @@ const FollowerCards = (props) => {
     const Card = styled.div`
         border: 2px solid black;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin: 20px auto;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         padding: 15px 0;
         width: 60%;
     `
@@ -23,13 +20,17 @@ const FollowerCards = (props) => {
                 return (
                     <Card>
                         <img className="thumbnail" src={follower.avatarUrl} alt='thumbnail'/>
-                        <h3>{follower.name}</h3>
-                        <p>{follower.login}</p>
-                        <a href={follower.htmlUrl}>{follower.htmlUrl}</a>
-                        <p>Followers: {follower.followers}</p>
-                        <p>Following: {follower.following}</p>
-                        <p>Location: {follower.location}</p>
-                        <p className={follower.bio?'show':'hide'}>Bio: {follower.bio}</p>
+                        <div>
+                            <h2>{follower.name}</h2>
+                            <p>{follower.login}</p>
+                            <a href={follower.htmlUrl}>{follower.htmlUrl}</a>
+                            <p>Followers: {follower.followers}</p>
+                            <p>Following: {follower.following}</p>
+                            <p>Location: {follower.location}</p>
+                            <p className={follower.bio?'show':'hide'}>Bio: {follower.bio}</p>
+                        </div>
+                        
+                        
                     </Card>
                 )
             })}
