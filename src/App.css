@@ -34,10 +34,10 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
 }
-.header a {
+.footer a {
   color: black;
 }
-.header a:visited {
+.footer a:visited {
   color: black;
 }
 
@@ -81,7 +81,7 @@ a {
 }
 
 .footer {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 10px;
