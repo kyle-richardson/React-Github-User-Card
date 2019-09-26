@@ -36,7 +36,7 @@ class App extends React.Component {
       const data = response.data
       this.setUser(data)
       this.setState(prev => ({
-        ...prev,
+        // ...prev,
         mainUser: {
           name: data.name,
           login: data.login

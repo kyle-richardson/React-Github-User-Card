@@ -6,7 +6,6 @@ import styled from "styled-components"
 const FollowerCards = (props) => {
 
     const Card = styled.div`
-        border: 2px solid black;
         display: flex;
         flex-direction: row;
         width: 60%;
@@ -17,6 +16,10 @@ const FollowerCards = (props) => {
         background-color: #FFF;
         margin: 0 auto;
         margin-bottom: 30px;
+        :first-child {
+            border: 2px solid black;
+            box-shadow: 0 3px 8px -2px #000;
+        }
     `
     return (
         <div>

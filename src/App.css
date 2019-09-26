@@ -87,6 +87,29 @@ a {
   padding-bottom: 10px;
 }
 
+.text-input {
+  width: 70%;
+  max-width: 400px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.search-button {
+  margin-left: 5px;
+  border: 1.5px solid black;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.title h1 {
+  margin-bottom: 10px;
+}
+
+.title h2 {
+  margin-top: 20px;
+}
+
 
 .show {
   display: block;

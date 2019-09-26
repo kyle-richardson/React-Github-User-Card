@@ -10,17 +10,18 @@ const Header = (props) => {
             <img className="lambda-logo" src={lambdaLogo} alt="lambda"/>
             <div className="title">
                 <h1>Github Network</h1>
-                <h2>{props.mainUser.name}</h2>
                 <form onSubmit = {props.handleSubmit}>
-                    <input 
+                    <input
+                        className="text-input"
                         name="searchValue"
                         type='text' 
                         value={props.searchValue}
                         onChange={props.handleChange}
                         placeholder="Search Github username"
                     />
-                    <button>Search</button>
+                    <button className="search-button">Search</button>
                 </form>
+                <h2>{props.mainUser.name}</h2>
             </div>
             <img className="github-logo" src={githubLogo} alt="github"/>
             
