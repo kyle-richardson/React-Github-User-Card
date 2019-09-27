@@ -6,9 +6,9 @@ import styled from "styled-components"
 const FollowerCards = (props) => {
 
     const Card = styled.div`
+        max-width: 620px;
         display: flex;
         flex-direction: row;
-        width: 60%;
         padding: 20px;
         display: flex;
         border-radius: 5px;
@@ -19,6 +19,12 @@ const FollowerCards = (props) => {
         :first-child {
             border: 2px solid black;
             box-shadow: 0 3px 8px -2px #000;
+        }
+        @media (max-width: 600px) {
+            max-width: 600px;
+            box-shadow: 0 0 0 black;
+            margin: 5px 0;
+            border-radius: 0;
         }
     `
     return (

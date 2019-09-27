@@ -7,7 +7,7 @@ import * as lambdaLogo from "./img/lambdalogo.png"
 const Header = (props) => {
     return (
         <div className="header">
-            <img className="lambda-logo" src={lambdaLogo} alt="lambda"/>
+            <img className="github-logo" src={githubLogo} alt="github"/>
             <div className="title">
                 <h1>Github Network</h1>
                 <form onSubmit = {props.handleSubmit}>
@@ -19,11 +19,12 @@ const Header = (props) => {
                         onChange={props.handleChange}
                         placeholder="Search Github username"
                     />
+                    <br />
                     <button className="search-button">Search</button>
                 </form>
                 <h2>{props.mainUser.name}</h2>
             </div>
-            <img className="github-logo" src={githubLogo} alt="github"/>
+            <img className="lambda-logo" src={lambdaLogo} alt="lambda"/>
             
         </div>
     )

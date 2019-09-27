@@ -3,8 +3,9 @@ html {
 }
 
 body {
+  width: 100%;
   font-size: 1.4rem;
-  background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: rgba(0, 0, 0, 0) linear-gradient(141deg, rgb(150, 102, 165) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%) repeat scroll 0% 0%
 }
 
 h1 {
@@ -52,10 +53,10 @@ a {
 }
 
 .lambda-logo {
-  padding-left: 30px;
+  padding-right: 30px;
 }
 .github-logo {
-  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .icon {
@@ -75,7 +76,6 @@ a {
 .thumbnail {
   max-width: 150px;
   height: auto;
-  max-height: 180px;
   border-radius: 3px;
   margin-right: 20px;
 }
@@ -88,18 +88,29 @@ a {
 }
 
 .text-input {
-  width: 70%;
+  width: 90%;
   max-width: 400px;
   border: 1px solid black;
-  padding: 5px;
+  padding: 6px;
+  border-radius: 8px;
 }
 
 .search-button {
   margin-left: 5px;
+  margin-top: 5px;
   border: 1.5px solid black;
   background: white;
   color: black;
   cursor: pointer;
+  border-radius: 16px;
+  padding: 6px 25px;
+}
+.search-button:hover {
+  border-color: rgb(15, 138, 151);
+  color: rgb(15, 138, 151);
+}
+.search-button:active {
+  background: rgb(221, 199, 228);
 }
 
 .title h1 {
@@ -107,7 +118,7 @@ a {
 }
 
 .title h2 {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
@@ -116,4 +127,24 @@ a {
 }
 .hide {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .lambda-logo {
+    display: none;
+  }
+  .github-logo {
+    max-width: 130px;
+    height: auto;
+    margin: 5px;
+    padding: 0;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .title {
+    padding: 0;
+  }
 }
