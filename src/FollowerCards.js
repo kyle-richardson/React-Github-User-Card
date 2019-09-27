@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import GitHubCalendar from 'react-github-calendar'
 
 
 
@@ -29,6 +30,7 @@ const FollowerCards = (props) => {
     `
     return (
         <div>
+            {/* <GitHubCalendar username='kyle-richardson'/> */}
             {props.followersList.map(follower =>{
                 return (
                     <Card>

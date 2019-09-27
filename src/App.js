@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
 import axios from "axios"
+
+import GitHubCalendar from 'react-github-calendar'
 import FollowerCards from "./FollowerCards"
 import Header from "./Header"
 import Footer from "./Footer"
 
 class App extends React.Component {
+  _isMounted=false;
+
   constructor() {
     super()
     this.state = {
@@ -33,16 +37,18 @@ class App extends React.Component {
     axios
     .get(`https://api.github.com/users/${this.state.mainUser.login}`)
     .then (response => {
-      const data = response.data
-      this.setUser(data)
-      this.setState(prev => ({
-        // ...prev,
-        mainUser: {
-          name: data.name,
-          login: data.login
-        },
-        followersList: []
-      }))
+      if(this._isMounted) {
+        const data = response.data
+        this.setState(prev => ({
+          // ...prev,
+          mainUser: {
+            name: data.name,
+            login: data.login
+          },
+          followersList: []
+        }))
+        this.setUser(data)
+      }
     })
     .then(()=>{
       this.pushToList()
@@ -103,31 +109,38 @@ class App extends React.Component {
   }
 
   componentDidMount = () => {
-
-  this.setState(() => ({
-    mainUser: {
-      name: 'Kyle Richardson',
-      login: 'kyle-richardson'
-    }
-  }), 
-  ()=> {this.mainAxios()}
-  )
+    this._isMounted=true;
+    this.setState(() => ({
+      mainUser: {
+        name: 'Kyle Richardson',
+        login: 'kyle-richardson'
+      }
+    }), 
+    ()=> {this.mainAxios()}
+    )
   
   }
 
   componentDidUpdate = () => {
     // this.mainAxios()
   }
+  componentWillUnmount = () => {
+    this._isMounted=false;
+  }
 
   render(){
     return (
+      
       <div className="App">
+        {/* {this._isMounted ? <GitHubCalendar username='kyle-richardson'/> : null} */}
         <Header 
           mainUser= {this.state.mainUser} 
           searchValue = {this.state.searchValue} 
           handleChange = {this.handleChange}
           handleSubmit = {this.handleSubmit}/>
-        <FollowerCards followersList={this.state.followersList}/>
+        <FollowerCards 
+          followersList={this.state.followersList}
+          mainUser= {this.state.mainUser}/>
         <Footer />
       </div>
     );
