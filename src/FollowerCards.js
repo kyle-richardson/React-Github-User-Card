@@ -43,6 +43,7 @@ const FollowerCards = (props) => {
                             <p>Following: {follower.following}</p>
                             <p className={follower.location?'show':'hide'}>Location: {follower.location}</p>
                             <p className={follower.bio?'show':'hide'}>Bio: {follower.bio}</p>
+                            <div className="switch-button" onClick={()=>props.handleSwitch(follower)}>Search using this user</div>
                         </div>
                     </Card>
                 )

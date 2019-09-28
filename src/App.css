@@ -121,6 +121,12 @@ a {
   margin-top: 10px;
 }
 
+.switch-button {
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+}
+
 
 .show {
   display: block;

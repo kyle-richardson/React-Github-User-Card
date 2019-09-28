@@ -84,7 +84,15 @@ class App extends React.Component {
             login: this.state.searchValue
         }
     }, ()=> this.mainAxios())
-    
+  }
+  handleSwitch = person => {
+    const {name, login} = person
+    this.setState({
+      mainUser: {
+        name: name,
+        login: login
+      }
+    }, ()=> this.mainAxios())
   }
   setUser = (data) => {
     this.setState({
@@ -99,8 +107,8 @@ class App extends React.Component {
         following: data.following,
         key: data.name
       },
-  })
-  return
+    })
+    return
   }
   pushToList = () => {
     this.setState(prev => ({
@@ -142,7 +150,8 @@ class App extends React.Component {
           handleSubmit = {this.handleSubmit}/>
         <FollowerCards 
           followersList={this.state.followersList}
-          mainUser= {this.state.mainUser}/>
+          mainUser= {this.state.mainUser}
+          handleSwitch={this.handleSwitch}/>
         <Footer />
       </div>
     );
