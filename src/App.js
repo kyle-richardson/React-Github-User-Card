@@ -127,12 +127,14 @@ class App extends React.Component {
   componentWillUnmount = () => {
     this._isMounted=false;
   }
+  showCalendar = ()=> {
+   return <GitHubCalendar username='kyle-richardson'/>
+  }
 
   render(){
     return (
-      
       <div className="App">
-        {/* {this._isMounted ? <GitHubCalendar username='kyle-richardson'/> : null} */}
+        {/* {this._isMounted ? this.showCalendar() : null} */}
         <Header 
           mainUser= {this.state.mainUser} 
           searchValue = {this.state.searchValue} 

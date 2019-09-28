@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 3.7rem;
+  font-size: 5rem;
 }
 h2 {
   font-size: 2.4rem;
@@ -75,7 +75,7 @@ a {
 
 .thumbnail {
   max-width: 150px;
-  height: auto;
+  height: 150px;
   border-radius: 3px;
   margin-right: 20px;
 }
