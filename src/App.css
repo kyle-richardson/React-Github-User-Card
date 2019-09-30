@@ -29,7 +29,7 @@ a {
   text-decoration: none;
 }
 .header {
-  margin: 30px auto;
+  margin-top: 30px;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -73,9 +73,16 @@ a {
   cursor: pointer;
 }
 
-.thumbnail {
+.thumbnail-first {
   max-width: 150px;
   height: 150px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.thumbnail {
+  max-width: 70px;
+  height: 70px;
   border-radius: 3px;
   margin-right: 20px;
 }
@@ -98,6 +105,7 @@ a {
 .search-button {
   margin-left: 5px;
   margin-top: 5px;
+  margin-bottom: 20px;
   border: 1.5px solid black;
   background: white;
   color: black;

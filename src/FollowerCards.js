@@ -31,19 +31,19 @@ const FollowerCards = (props) => {
     return (
         <div>
             {/* <GitHubCalendar username='kyle-richardson'/> */}
-            {props.followersList.map(follower =>{
+            {props.followersList.map((follower,ind) =>{
                 return (
                     <Card>
-                        <img className="thumbnail" src={follower.avatarUrl} alt='thumbnail'/>
+                        <img className={ind===0 ? 'thumbnail-first' : 'thumbnail'} src={follower.avatarUrl} alt='thumbnail'/>
                         <div>
-                            <h2>{follower.name}</h2>
-                            <a href={follower.htmlUrl}>Github page</a>
-                            <p>Username: {follower.login}</p>
-                            <p>Followers: {follower.followers}</p>
-                            <p>Following: {follower.following}</p>
+                            <h3>{follower.login}</h3>
+                            {/* <h2>{follower.name}</h2> */}
+                            <a className={follower.htmlUrl?'show':'hide'} href={follower.htmlUrl}>Github page</a>
+                            <p className={follower.followers?'show':'hide'}>Followers: {follower.followers}</p>
+                            <p className={follower.following?'show':'hide'}>Following: {follower.following}</p>
                             <p className={follower.location?'show':'hide'}>Location: {follower.location}</p>
                             <p className={follower.bio?'show':'hide'}>Bio: {follower.bio}</p>
-                            <div className="switch-button" onClick={()=>props.handleSwitch(follower)}>Search using this user</div>
+                            <div className={ind===0 ? 'hide' : 'switch-button'} onClick={()=>props.handleSwitch(follower)}>Search using this user</div>
                         </div>
                     </Card>
                 )

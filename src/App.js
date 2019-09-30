@@ -55,18 +55,22 @@ class App extends React.Component {
       return axios.get(`https://api.github.com/users/${this.state.mainUser.login}/followers`)
     })
     .then (response => {
-      const usernameArray= response.data.map(ele => {
-        return ele.login
+      // const usernameArray= response.data.map(ele => {
+      //   return ele.login
+      // })
+      // usernameArray.forEach(username => {
+      //   axios.get(`https://api.github.com/users/${username}`)
+      //     .then(response => {
+      //       this.setUser(response.data)
+      //       return this.pushToList()
+      //     })
+      //     .catch(err => console.log(err)) 
+      // })
+      // return
+      response.data.forEach(ele=> {
+        this.setUser(ele)
+        this.pushToList()
       })
-      usernameArray.forEach(username => {
-        axios.get(`https://api.github.com/users/${username}`)
-          .then(response => {
-            this.setUser(response.data)
-            return this.pushToList()
-          })
-          .catch(err => console.log(err)) 
-      })
-      return
     })
     .catch (err => console.log(err))
   }
@@ -110,9 +114,9 @@ class App extends React.Component {
     })
     return
   }
-  pushToList = () => {
+  pushToList = (user=this.state.user) => {
     this.setState(prev => ({
-      followersList: [...prev.followersList, this.state.user]
+      followersList: [...prev.followersList, user]
     }))
   }
 
