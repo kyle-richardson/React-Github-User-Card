@@ -5,7 +5,7 @@ html {
 body {
   width: 100%;
   font-size: 1.4rem;
-  background: rgba(0, 0, 0, 0) linear-gradient(141deg, rgb(150, 102, 165) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%) repeat scroll 0% 0%
+  background: rgba(0, 0, 0, 0) linear-gradient(141deg, rgb(150, 102, 165) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%) repeat scroll 0% 0%;
 }
 
 h1 {
@@ -27,6 +27,11 @@ h1, h2, h3, h4 {
 }
 a {
   text-decoration: none;
+}
+
+.github {
+  margin: 10px;
+  text-align: center;
 }
 .header {
   margin-top: 30px;
@@ -103,7 +108,6 @@ a {
 }
 
 .search-button {
-  margin-left: 5px;
   margin-top: 5px;
   margin-bottom: 20px;
   border: 1.5px solid black;
@@ -160,5 +164,9 @@ a {
   }
   .title {
     padding: 0;
+  }
+  .search-button {
+    width: 93%;
+    border-radius: 8px;
   }
 }

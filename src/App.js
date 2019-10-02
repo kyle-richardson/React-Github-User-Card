@@ -37,10 +37,9 @@ class App extends React.Component {
     axios
     .get(`https://api.github.com/users/${this.state.mainUser.login}`)
     .then (response => {
-      if(this._isMounted) {
+      if (this._isMounted) {
         const data = response.data
         this.setState(prev => ({
-          // ...prev,
           mainUser: {
             name: data.name,
             login: data.login
@@ -50,27 +49,20 @@ class App extends React.Component {
         this.setUser(data)
       }
     })
+
     .then(()=>{
+      if (this._isMounted) {
       this.pushToList()
       return axios.get(`https://api.github.com/users/${this.state.mainUser.login}/followers`)
+      }
     })
     .then (response => {
-      // const usernameArray= response.data.map(ele => {
-      //   return ele.login
-      // })
-      // usernameArray.forEach(username => {
-      //   axios.get(`https://api.github.com/users/${username}`)
-      //     .then(response => {
-      //       this.setUser(response.data)
-      //       return this.pushToList()
-      //     })
-      //     .catch(err => console.log(err)) 
-      // })
-      // return
+      if (this._isMounted) {
       response.data.forEach(ele=> {
         this.setUser(ele)
         this.pushToList()
       })
+    }
     })
     .catch (err => console.log(err))
   }
@@ -132,21 +124,16 @@ class App extends React.Component {
     )
   
   }
-
-  componentDidUpdate = () => {
-    // this.mainAxios()
-  }
   componentWillUnmount = () => {
     this._isMounted=false;
   }
   showCalendar = ()=> {
-   return <GitHubCalendar username='kyle-richardson'/>
+   return 
   }
 
   render(){
     return (
       <div className="App">
-        {/* {this._isMounted ? this.showCalendar() : null} */}
         <Header 
           mainUser= {this.state.mainUser} 
           searchValue = {this.state.searchValue} 
