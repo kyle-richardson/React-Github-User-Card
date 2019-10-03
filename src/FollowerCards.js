@@ -37,7 +37,7 @@ const FollowerCards = (props) => {
                 return (
                     <div key={ind}>
                         <div className="github">
-                            {ind===0 && follower.login!=="kyle-richardson" ? <GitHubCalendar username={follower.login}/> : null}
+                            {ind===0 ? <GitHubCalendar username={follower.login}/> : null}
                         </div>
                         <Card>
                             <img className={ind===0 ? 'thumbnail-first' : 'thumbnail'} src={follower.avatarUrl} alt='thumbnail'/>

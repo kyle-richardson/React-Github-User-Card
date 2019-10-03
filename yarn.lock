@@ -8424,10 +8424,10 @@ react-fontawesome@^1.6.1:
   dependencies:
     prop-types "^15.5.6"
 
-react-github-calendar@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-0.14.0.tgz#e877a894275ff34ff4aed94b82a963274a77b55b"
-  integrity sha512-nf679+oUJ+zBI2Eb8ycz/gGS/79DMBHDvS34gsziTfKLbZy79tNfKxZi02k/8LggsBJBQ5ytT0GKUBkH6rKulw==
+react-github-calendar@^0.14.1:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/react-github-calendar/-/react-github-calendar-0.14.1.tgz#094a30ac4a15e1c70d6799030a6def535aec9b47"
+  integrity sha512-/gX+fvp3GyhjOZv55NneQ5+wxePfQG8MBwie5Fetl/3RZXKVW9yEfIgg8grRWJfgiTEIUEDdFSpyLk//VU+FNA==
   dependencies:
     date-fns "^1.29.0"
     prop-types "^15.6.2"
