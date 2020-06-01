@@ -59,6 +59,16 @@ a {
   color: black;
 }
 
+.footer-icons {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
 /* .title {
   padding-top: 50px;
 } */
@@ -106,7 +116,7 @@ a {
 }
 
 .footer {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 10px;
