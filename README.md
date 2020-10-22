@@ -1,6 +1,6 @@
 ## Kyle Richardson - Github Network
 
-### [Deployed site](kyle-github-network.netlify.app/)
+### [Deployed site](https://kyle-github-network.netlify.app/)
 
 ### Api used - https://api.github.com
 
