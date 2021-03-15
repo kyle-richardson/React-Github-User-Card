@@ -1,6 +1,6 @@
 import React from "react";
 import * as githubLogo from "./img/githublogo.png";
-import * as lambdaLogo from "./img/lambdalogo.png";
+// import * as lambdaLogo from "./img/lambdalogo.png";
 
 const Header = (props) => {
   return (
